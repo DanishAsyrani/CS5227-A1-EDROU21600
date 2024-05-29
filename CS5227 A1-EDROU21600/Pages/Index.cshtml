@@ -1,0 +1,84 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CS5227_A1_EDROU21600</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <!--<link rel="stylesheet" href="~/CS5227_A1_EDROU21600.styles.css" asp-append-version="true" /> -->
+    <script src="~/js/site.js?v=1" asp-append-version="true"></script>
+</head>
+<body>
+    <script src="~/js/site.js"></script>
+   <header>
+       <nav></nav>
+   </header>
+
+
+    <main class="container">
+        <div role="main" class="pb-3">
+            @* @RenderBody() *@
+
+            <div class="picSlider ">
+                <div class="picList">
+                    <div class="picItem">
+                        <img src="Resources/maggiPoster.jpg" alt="maggi Poster">
+                    </div>
+                    <div class="picItem">
+                        <img src="Resources/fullMaggi.webp" alt="maggi Poster">
+                    </div>
+                    <div class="picItem">
+                        <img src="Resources/indomieNew.jpg" alt="maggi Poster">
+                    </div>
+                    <div class="picItem">
+                        <img src="Resources/singleIndomie.jpg" alt="maggi Poster">
+                    </div>
+                    <div class="picItem">
+                        <img src="Resources/fullSamyangPoster.png" alt="maggi Poster">
+                    </div>
+                    <div class="picItem">
+                        <img src="Resources/samyangCarbonara.jpg" alt="maggi Poster">
+                    </div>
+                    <div class="picItem">
+                        <img src="Resources/shinRamyun.png" alt="maggi Poster">
+                    </div>
+                    <div class="picItem">
+                        <img src="Resources/burgerThailand.png" alt="maggi Poster">
+                    </div>
+                    <div class="picItem">
+                        <img src="Resources/cocaCola.jpg" alt="maggi Poster">
+                    </div>
+                </div>
+
+
+                <!--button prev and next-->
+                <div class="buttons">
+                    <button class="prev"><</button>
+                    <button class="next">></button>
+                </div>
+                <!--Dot slide-->
+                <ul class="dots">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+            <h1 class="mukbangTitle">MUKBANG</h1>
+        </div>
+    </main>
+
+</body>
+</html>

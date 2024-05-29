@@ -1,0 +1,47 @@
+﻿@page
+@model CS5227_A1_EDROU21600.Pages.Admin.Products.Index1Model
+@{
+}
+
+<h2 class="text-center mb-5">PRODUCTS</h2>
+
+<div class="row mb-5">
+	<div class="col">
+		<a class="btn btn-primary" href="/Admin/Products/Create">New Product</a>
+	</div>
+	<div class="col"></div>
+</div>
+
+<table class="table">
+	<tr>
+		<th>ID</th>
+		<th>Name</th>
+		<th>Country</th>
+		<th>Price</th>
+		<th>Description</th>
+		<th>ImageFileName</th>
+		<th>ImageData</th>
+		<th>CreatedAt</th>
+		<th>Action</th>
+
+	</tr>
+
+	@foreach(var product in Model.Products)
+	{
+		<tr>
+			<td>@product.Id</td>
+			<td>@product.Name</td>
+			<td>@product.Country</td>
+			<td>@(product.Price)$</td>
+			<td>@product.Description></td>
+			<td><img src="/ProductPics/@product.ImageFileName" width="80%" /></td>
+			<td>@product.ImageData</td>
+			<td>@product.CreatedAt.ToString("MM/dd/yyyy")</td>
+			<td style="white-space:nowrap">
+				<a class="btn btn-primary btn-sm" href="/Admin/Products/Edit?@product.Id">Edit</a>
+				<a class="btn btn-danger btn-sm" href="/Admin/Products/Delete?@product.Id">Delete</a>
+			</td>
+
+		</tr>
+	}
+</table>

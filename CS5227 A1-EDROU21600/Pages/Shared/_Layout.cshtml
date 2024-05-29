@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CS5227_A1_EDROU21600</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+   <!--<link rel="stylesheet" href="~/CS5227_A1_EDROU21600.styles.css" asp-append-version="true" /> -->
+    <script src="~/js/site.js?v=1" asp-append-version="true"></script>
+</head>
+<body>
+    <script src="~/js/site.js"></script>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index"><a id="instantWord"><b>INSTANT</b></a><a id="expressWord"><b>EXPRESS</b></a></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">PRODUCTS</a>
+                            <ul class="dropdown">
+                                <li><a href="">ALL</a></li>
+                                <li><a href="">MALAYSIA</a></li>
+                                <li><a href="">BRUNEI</a></li>
+                                <li><a href="">KOREA</a></li>
+                                <li><a href="">THAILAND</a></li>
+                                <li><a href="">BEVERAGES</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <partial name="_LoginPartial" />
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+    <main class="container">
+            <div role="main" class="pb-3">
+            @RenderBody()
+
+                @* <div class="picSlider ">
+                    <div class="picList">
+                        <div class="picItem">
+                            <img src="Resources/maggiPoster.jpg" alt="maggi Poster" >   
+                        </div>
+                        <div class="picItem">
+                            <img src="Resources/fullMaggi.webp" alt="maggi Poster" >
+                        </div>
+                        <div class="picItem">
+                            <img src="Resources/indomieNew.jpg" alt="maggi Poster">
+                        </div>
+                        <div class="picItem">
+                            <img src="Resources/singleIndomie.jpg" alt="maggi Poster">
+                        </div>
+                        <div class="picItem">
+                            <img src="Resources/fullSamyangPoster.png" alt="maggi Poster">
+                        </div>
+                        <div class="picItem">
+                            <img src="Resources/samyangCarbonara.jpg" alt="maggi Poster">
+                        </div>
+                        <div class="picItem">
+                            <img src="Resources/shinRamyun.png" alt="maggi Poster">
+                        </div>
+                        <div class="picItem">
+                            <img src="Resources/burgerThailand.png" alt="maggi Poster">
+                        </div>
+                        <div class="picItem">
+                            <img src="Resources/cocaCola.jpg" alt="maggi Poster">
+                        </div>
+                    </div>
+                    
+
+                    <!--button prev and next-->
+                    <div class="buttons">
+                        <button id="prev"><</button>
+                        <button id="next">></button>
+                    </div>
+                    <!--Dot slide-->
+                    <ul class="dots">
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+
+              <h1 class="mukbangTitle">MUKBANG</h1> *@
+        </div>
+    </main> 
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - CS5227_A1_EDROU21600 - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            <a class="" id="login" asp-area="Identity" asp-page="/Account/Logout">LogOut</a>
+        </div>
+        <a href="/User">USER</a>
+        <a href="/Admin">ADMIN</a>
+        <a href="/Client">BUYER</a> 
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

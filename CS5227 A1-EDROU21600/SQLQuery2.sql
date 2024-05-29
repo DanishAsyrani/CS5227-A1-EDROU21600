@@ -1,0 +1,2 @@
+﻿UPDATE Products SET ImageFileName = "maggiAsamSingle.jpg" WHERE Id=3;
+UPDATE Products SET ImageFileName = replace("ImageFileName","maggiAsamSingle.jgp","maggiAsamSingle.jpg") where ImageFileName = "maggiAsamSingle.jgp"
