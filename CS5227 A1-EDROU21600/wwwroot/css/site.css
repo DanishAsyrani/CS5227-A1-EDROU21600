@@ -160,7 +160,8 @@ ul li:hover ul.dropdown{
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,...");*/ /* Custom icon if needed */
+    background-image: url("data:image/svg+xml,...");
+     /* Custom icon if needed */
 }
 
 .navbar-collapse {

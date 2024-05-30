@@ -34,12 +34,15 @@
 			<td>@product.Country</td>
 			<td>@(product.Price)$</td>
 			<td>@product.Description></td>
-			<td><img src="/ProductPics/@product.ImageFileName" width="80%" /></td>
+			<td><img src="/ProductPics/@product.ImageFileName" width="80b " /></td>
 			<td>@product.ImageData</td>
 			<td>@product.CreatedAt.ToString("MM/dd/yyyy")</td>
 			<td style="white-space:nowrap">
-				<a class="btn btn-primary btn-sm" href="/Admin/Products/Edit?@product.Id">Edit</a>
-				<a class="btn btn-danger btn-sm" href="/Admin/Products/Delete?@product.Id">Delete</a>
+				<a class="btn btn-primary btn-sm" href="/Admin/Products/Edit">Edit</a>
+				<a class="btn btn-danger btn-sm" href="/Admin/Products/Delete">Delete</a>
+				@* <input type="hidden" name="id" value="@product.Id" />
+				<button type="submit" formaction="?handler=Edit" class="btn btn-primary">Edit</button>
+				<button type="submit" formaction="?handler=Delete" class="btn-danger">Delete</button> *@
 			</td>
 
 		</tr>
