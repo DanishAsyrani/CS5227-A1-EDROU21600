@@ -12,7 +12,7 @@
 <body>
     <script src="~/js/site.js"></script>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 fixed-top">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index"><a id="instantWord"><b>INSTANT</b></a><a id="expressWord"><b>EXPRESS</b></a></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -25,7 +25,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/productList">PRODUCTS</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Shop">PRODUCTS</a>
                             <ul class="dropdown">
                                 <li><a href="">ALL</a></li>
                                 <li><a href="">MALAYSIA</a></li>
@@ -34,6 +34,9 @@
                                 <li><a href="">THAILAND</a></li>
                                 <li><a href="">BEVERAGES</a></li>
                             </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Advertising">ADVERTISING</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Contact">CONTACT US</a>
@@ -114,11 +117,15 @@
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2024 - CS5227_A1_EDROU21600 - <a asp-area="" asp-page="/Privacy">Privacy</a>
-            <a class="" id="login" asp-area="Identity" asp-page="/Account/Logout">LogOut</a>
+            @* <a class="" id="login" asp-area="Identity" asp-page="/Account/Logout">LogOut</a> *@
         </div>
-        <a href="/User">USER</a>
+        @* <a href="/User">USER</a>
         <a href="/Admin">ADMIN</a>
-        <a href="/Client">BUYER</a> 
+        <a href="/Client">BUYER</a>  *@
+        <a class="nav-link text-dark position-absolute" asp-area="" asp-page="/Index">HOME</a>
+        <a class="nav-link text-dark position-absolute" asp-area="" asp-page="/Shop">PRODUCTS</a>
+        <a class="nav-link text-dark position-absolute" asp-area="" asp-page="/Advertising">ADVERTISING</a>
+        <a class="nav-link text-dark position-absolute" asp-area="" asp-page="/Contact">CONTACT US</a>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

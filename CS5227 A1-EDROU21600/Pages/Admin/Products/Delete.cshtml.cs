@@ -14,14 +14,14 @@ namespace CS5227_A1_EDROU21600.Pages.Admin.Products
 			this.environment = environment;
 			this.context = context;
 		}
-        public void OnGet(int? Id)
+        public void OnGet(int? id)
         {
-            if (Id == null)
+            if (id == null)
             {
                 Response.Redirect("/Admin/Products/Index1");
-                return;
+                return; 
             }
-            var product = context.Products.Find(Id);
+            var product = context.Products.Find(id);
             if (product == null)
             {
                 Response.Redirect("/Admin/Products/Index1");

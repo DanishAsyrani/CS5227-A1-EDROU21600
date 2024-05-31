@@ -245,3 +245,12 @@ ul li:hover ul.dropdown{
 .dots li.active {
      background-color: #333;
         }*/
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: darkgoldenrod;
+    color: white;
+    text-align: center;
+}

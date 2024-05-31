@@ -29,5 +29,6 @@ namespace CS5227_A1_EDROU21600.Data
             builder.Entity<IdentityRole>().HasData(admin, client, seller);
         }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Sale> Sale { get; set; }
     }
 }

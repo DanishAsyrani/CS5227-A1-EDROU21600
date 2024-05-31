@@ -1,0 +1,43 @@
+﻿@page
+@model CS5227_A1_EDROU21600.Pages.CheckoutModel
+@{
+	ViewData["Title"] = "Checkout";
+}
+<h2 class="text-center mb-5">Checkout</h2>
+
+@if (Model.CartItems != null && Model.CartItems.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.CartItems)
+            {
+                <tr>
+                    <td>@item.ProductName</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.Price.ToString("C")</td>
+                    <td>@item.Subtotal.ToString("C")</td>
+                </tr>
+            }
+            <tr>
+                <td colspan="3" class="text-right"><strong>Total:</strong></td>
+                <td><strong>@Model.Total.ToString("C")</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form method="post">
+        <button type="submit" class="btn btn-primary mt-4">Complete Purchase</button>
+    </form>
+}
+else
+{
+    <p>Your cart is empty.</p>
+}

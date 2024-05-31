@@ -1,0 +1,56 @@
+﻿@page
+@model CS5227_A1_EDROU21600.Pages.ShopModel
+@{
+	ViewData["Title"] = "Shop";
+}
+<h2 class="text-center mb-5">Shop Items</h2>
+
+<form method="get" class="mb-4">
+    <div class="form-group">
+        <label for="Search">Search</label>
+        <input type="text" class="form-control" id="Search" name="search" value="@Model" placeholder="Enter search term">
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+@if (Model.Products.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Country</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model.Products)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.Country</td>
+                    <td>@product.Price.ToString("C")</td>
+                    <td>@product.Description</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(product.ImageFileName))
+                        {
+                            <img src="/ProductPics/@product.ImageFileName" width="80" />
+                        }
+                    </td>
+                    <td>
+                        <form method="post" asp-page-handler="AddToCart">
+                            <input type="hidden" name="ProductId" value="@product.Id" />
+                            <button type="submit" class="btn btn-primary">Add to Cart</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No products found.</p>
+}

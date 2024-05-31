@@ -26,9 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Deals\" />
     <Folder Include="Pages\Login\" />
-    <Folder Include="Pages\Checkout\" />
     <Folder Include="Pages\Shop\" />
     <Folder Include="Pages\Product\" />
   </ItemGroup>
